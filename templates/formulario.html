@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predição de Adesão à Campanha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Formulário de Predição</h1>
+    <form method="POST">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="Ano_Nascimento">Ano de Nascimento:</label>
+                <input type="number" id="Ano_Nascimento" name="Ano_Nascimento" required>
+            </div>
+            <div class="form-group">
+                <label for="Escolaridade">Escolaridade:</label>
+                <select id="Escolaridade" name="Escolaridade" required>
+                    <option value="0">Básico</option>
+                    <option value="1">Fundamental</option>
+                    <option value="2">Graduado</option>
+                    <option value="3">Mestrado</option>
+                    <option value="4">Doutorado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Renda Anual">Renda:</label>
+                <input type="number" id="Renda" name="Renda" required>
+            </div>
+            <div class="form-group">
+                <label for="Criancas_Casa">Crianças em Casa:</label>
+                <input type="number" id="Criancas_Casa" name="Criancas_Casa" required>
+            </div>
+            <div class="form-group">
+                <label for="Adolescentes_Casa">Adolescentes em Casa:</label>
+                <input type="number" id="Adolescentes_Casa" name="Adolescentes_Casa" required>
+            </div>
+            <div class="form-group">
+                <label for="Recencia">Dias sem comprar:</label>
+                <input type="number" id="Recencia" name="Recencia" required>
+            </div>
+            <div class="form-group">
+                <label for="Gasto_Vinhos">Gasto com Vinhos:</label>
+                <input type="number" id="Gasto_Vinhos" name="Gasto_Vinhos" required>
+            </div>
+            <div class="form-group">
+                <label for="Gasto_Frutas">Gasto com Frutas:</label>
+                <input type="number" id="Gasto_Frutas" name="Gasto_Frutas" required>
+            </div>
+            <div class="form-group">
+                <label for="Gasto_Carnes">Gasto com Carnes:</label>
+                <input type="number" id="Gasto_Carnes" name="Gasto_Carnes" required>
+            </div>
+            <div class="form-group">
+                <label for="Gasto_Peixes">Gasto com Peixes:</label>
+                <input type="number" id="Gasto_Peixes" name="Gasto_Peixes" required>
+            </div>
+            <div class="form-group">
+                <label for="Gasto_Doces">Gasto com Doces:</label>
+                <input type="number" id="Gasto_Doces" name="Gasto_Doces" required>
+            </div>
+            <div class="form-group">
+                <label for="Gasto_Ouro">Gasto com Ouro:</label>
+                <input type="number" id="Gasto_Ouro" name="Gasto_Ouro" required>
+            </div>
+            <div class="form-group">
+                <label for="Num_Ofertas_Compras">Compras com desconto:</label>
+                <input type="number" id="Num_Ofertas_Compras" name="Num_Ofertas_Compras" required>
+            </div>
+            <div class="form-group">
+                <label for="Num_Compras_Web">Compras pela internet:</label>
+                <input type="number" id="Num_Compras_Web" name="Num_Compras_Web" required>
+            </div>
+            <div class="form-group">
+                <label for="Num_Compras_Catalogo">Compras pelo catálogo:</label>
+                <input type="number" id="Num_Compras_Catalogo" name="Num_Compras_Catalogo" required>
+            </div>
+            <div class="form-group">
+                <label for="Num_Compras_Loja">Compras na loja:</label>
+                <input type="number" id="Num_Compras_Loja" name="Num_Compras_Loja" required>
+            </div>
+            <div class="form-group">
+                <label for="Num_Visitas_Web_Mes">Numero de Visitas ao Site:</label>
+                <input type="number" id="Num_Visitas_Web_Mes" name="Num_Visitas_Web_Mes" required>
+            </div>
+            <div class="form-group">
+                <label for="Resposta">Resposta à Campanha Anterior:</label>
+                <select id="Resposta" name="Resposta" required>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date&time diff">Cliente desde:</label>
+                <input type="date" id="date&time diff" name="date&time diff" required>
+            </div>
+            <div class="form-group full-width">
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

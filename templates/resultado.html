@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Predição</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        table, th, td {
+            border: 1px solid #dddddd;
+        }
+        th, td {
+            padding: 12px;
+        }
+        th {
+            background-color: #3700B3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Resultado da Predição</h2>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Tem o perfil de quem aderiria a campanha?</td>
+            <td>
+                {% if resultado['probability_0'][0] > resultado['probability_1'][0] %}
+                    Não
+                {% else %}
+                    Sim
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>Probabilidade de não aderir</td>
+            <td>{{ (resultado['probability_0'][0] * 100) | round(2) }}%</td>
+        </tr>
+        <tr>
+            <td>Probabilidade de aderir</td>
+            <td>{{ (resultado['probability_1'][0] * 100) | round(2) }}%</td>
+        </tr>
+    </table>
+</body>
+</html>
+

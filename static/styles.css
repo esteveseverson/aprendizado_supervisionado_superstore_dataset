@@ -1,0 +1,97 @@
+/* Configurações Gerais */
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 900px;
+}
+
+.form-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #BB86FC;
+}
+
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #262626;
+    color: #E0E0E0;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #3700B3;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #BB86FC;
+    outline: none;
+}
+
+.form-group.full-width {
+    grid-column: span 3; /* Botão de envio ocupa toda a largura */
+}
+
+p {
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
