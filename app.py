@@ -27,8 +27,6 @@ min_values = {
     'Num_Compras_Catalogo': 0,
     'Num_Compras_Loja': 0,
     'Num_Visitas_Web_Mes': 0,
-    'Resposta': 0,
-    'date&time diff': 0
 }
 
 max_values = {
@@ -49,8 +47,6 @@ max_values = {
     'Num_Compras_Catalogo': 28,
     'Num_Compras_Loja': 13,
     'Num_Visitas_Web_Mes': 20,
-    'Resposta': 1,
-    'date&time diff': 1063
 }
 
 # Função para normalizar os dados
@@ -88,16 +84,8 @@ def formulario():
             'Num_Compras_Web': request.form['Num_Compras_Web'],
             'Num_Compras_Catalogo': request.form['Num_Compras_Catalogo'],
             'Num_Compras_Loja': request.form['Num_Compras_Loja'],
-            'Num_Visitas_Web_Mes': request.form['Num_Visitas_Web_Mes'],
-            'Resposta': int(request.form['Resposta']),
-            'date&time diff': request.form['date&time diff']
+            'Num_Visitas_Web_Mes': request.form['Num_Visitas_Web_Mes']
         }
-        
-        # Convertendo a data do formulário para o formato correto
-        date_format = '%Y-%m-%d'
-        form_date = datetime.strptime(data['date&time diff'], '%Y-%m-%d')
-        reference_date = datetime.strptime('2014-12-06', date_format)
-        data['date&time diff'] = (reference_date - form_date).days
         
         # Normalizar os dados
         normalized_data = normalize_data(data)
